@@ -64,7 +64,7 @@ const Navigation = ({}: NavigationProps) => {
       </p>
       <nav className={styles.navContainer}>
         <Link
-          href="/#about"
+          href="#about"
           className={`${styles.navLink} ${
             active === "about" ? styles.active : ""
           }`}
@@ -72,7 +72,7 @@ const Navigation = ({}: NavigationProps) => {
           About
         </Link>
         <Link
-          href="/#experience"
+          href="#experience"
           className={`${styles.navLink} ${
             active === "experience" ? styles.active : ""
           }`}
@@ -80,7 +80,7 @@ const Navigation = ({}: NavigationProps) => {
           Experience
         </Link>
         <Link
-          href="/#projects"
+          href="#projects"
           className={`${styles.navLink} ${
             active === "projects" ? styles.active : ""
           }`}
