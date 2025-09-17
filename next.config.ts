@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || "",
   output: "export",
   images: { unoptimized: true },
+  trailingSlash: true,
 };
 
 export default nextConfig;
