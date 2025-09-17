@@ -1,0 +1,17 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+.footerContainer {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+
+  .muiIcon {
+    color: $primary-grey;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary-grey;
+      cursor: pointer;
+    }
+  }
+}

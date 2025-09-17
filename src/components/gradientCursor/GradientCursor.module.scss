@@ -1,0 +1,25 @@
+@use "@styles/variables" as *;
+
+.gradientCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
+  @media (hover: none) and (pointer: coarse) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.visible {
+  opacity: 1;
+}

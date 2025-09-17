@@ -1,0 +1,69 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+
+.title {
+  color: $secondary-grey;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+.subTitle {
+  color: $secondary-grey;
+  font-weight: $font-regular;
+}
+.description {
+  color: $primary-grey;
+  font-weight: $font-regular;
+  margin: 1rem 0 1.5rem;
+  max-width: 325px;
+
+  @include tablet {
+    font-size: large;
+  }
+}
+.navContainer {
+  display: none;
+  gap: 1.5rem;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $primary-grey;
+    transition: color 0.3s ease;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $primary-grey;
+      margin-right: 10px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: $secondary-grey;
+
+      &::before {
+        width: 50px;
+        background-color: $secondary-grey;
+      }
+    }
+
+    &.active {
+      color: $secondary-grey;
+
+      &::before {
+        width: 70px;
+        background-color: $secondary-grey;
+      }
+    }
+  }
+}

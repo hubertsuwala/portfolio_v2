@@ -1,0 +1,31 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+.aboutContainer {
+  padding: 4rem 0;
+  .sectionTitle {
+    letter-spacing: 0.1rem;
+    color: $secondary-grey;
+    margin-bottom: 1.8rem;
+    font-weight: $font-semibold;
+    @include desktop {
+      display: none;
+    }
+  }
+  .paragraph {
+    margin-bottom: 1rem;
+    .boldColor {
+      font-family: $font-family-primary;
+      color: $secondary-grey;
+      font-weight: $font-regular;
+      text-decoration: none;
+    }
+  }
+  .link {
+    text-decoration: none;
+    &:hover {
+      .boldColor {
+        color: $primary-color;
+      }
+    }
+  }
+}
