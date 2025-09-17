@@ -8,7 +8,7 @@ interface NavigationProps {
 }
 
 const Navigation = ({}: NavigationProps) => {
-  const [active, setActive] = useState<string>("about");
+  const [active, setActive] = useState<string>("");
 
   useEffect(() => {
     const sections = ["about", "experience", "projects"];
