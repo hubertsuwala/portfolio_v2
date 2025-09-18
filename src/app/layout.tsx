@@ -18,7 +18,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Hubert Suwala - Full-stack frontend & backend Developer Portfolio",
+  title: "Hubert Suwala",
   description:
     "Full-stack developer crafting intuitive web applications with modern technologies. View my projects and experience.",
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Hubert Suwala - Full-stack Developer",
     description:
       "Portfolio of a full-stack developer specializing in modern web applications",
-    url: "https://yourdomain.com",
+    url: "https://hubertsuwala.github.io/portfolio_v2",
     siteName: "Hubert Suwala Portfolio",
     type: "website",
   },
@@ -44,10 +44,18 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.ico" },
+      {
+        url: `${
+          process.env.NEXT_PUBLIC_BASE_PATH || ""
+        }/favicon/favicon-96x96.png`,
+        sizes: "96x96",
+        type: "image/png",
+      },
+      { url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favicon/favicon.ico` },
     ],
-    apple: "/favicon/apple-touch-icon.png",
+    apple: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/favicon/apple-touch-icon.png`,
   },
 };
 const RootLayout = ({
